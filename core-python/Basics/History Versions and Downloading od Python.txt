@@ -1,0 +1,38 @@
+======================================================================================
+					Getting Started With Python
+======================================================================================
+						Historical Development of PYTHON
+	---------------------------------------------------------------------------------------------------------------------------------------------
+=>The Python Programming Lang Concevived(Foundation stone laid down) in the Year 1980.
+=>The Python Programming Lang started Its Development in The year 1989
+=>The Python Programming Lang Officially Released in the Year 1991 Feb 20
+=>The  Python Programming Lang Developed by "GUIDO VAN ROSSUM" (Father of Python).
+=>The Python Programming Lang Developed at Centrum Wiskunde Informatica (CWI) Institue  in Nether Lands.
+=>The Python Programming Language Maintained and Managed a Non-Commercial Organization 
+     called PYTHON SOFTWARE FOUNDATION (PSF).
+=>The Official Website of PSF is www.python.org
+	------------------------------------------------------------------------------------------------------------------------------------------
+				Versions of Python--Most Imp
+	--------------------------------------------------------------------------------------------------------------------------------------
+=>Python Programming Contains 3 Types of Versions. They are
+
+		1. Python 1.x  Here 1 is called Majot Version and x Represents 1 2 3 4 5 6 called Minor Version
+			=> As on today Python1.x Outdated
+			=>Python 2.x does not support Backward compatability with Python 1.x
+
+		2. Python 2.x Here 2 is called Major Version and X Represents  1 2 3 4 5 6 7 Called Minor Version
+			=> As on today Python2.x Outdated
+			=>Python 3.x does not support Backward compatability with Python 2.x
+		3. Python 3.x Here 3 Is called Major Version ---Current Version
+									and x Represents 1 2 3 4 5 6 7 8 (Old Version)
+									                               9 10 11 (Old Version, still Continued--MNC)-Secured
+												       12 (New Version)--Bug Fix
+												       13 (Latest Version)--Bug Fix
+												       14 (Future OR PreView Version)--2025 Oct
+==============================================================================================
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+					Downloading and Intallation Procedure of Python
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+=>Goto  www.python.org
+=>Choose downloads---- Click on python 3.13
+=>After downloading, start Installing-----etc
