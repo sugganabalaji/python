@@ -1,0 +1,74 @@
+﻿=============================================================
+                                                                        3.bool 
+                                =============================================================
+=>here 'bool' is one of Pre-Defined Class and treated as Fundamental Category Data Type.
+=>The purpose of bool  is that "To store True  , False Values".
+=>Here True and False are the Keywords and they are treated as bool type values.
+=>Programtically, Internally True is treated as 1 and False Treated as 0.
+=>
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Examples
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+>>> a=true------------------------NameError: name 'true' is not defined
+>>> b=false-----------------------NameError: name 'false' is not defined.
+--------------------------
+>>> a=True
+>>> print(a,type(a))------------True <class 'bool'>
+>>> b=False
+>>> print(b,type(b))------------False <class 'bool'>
+-------------------------------
+>>> a=True
+>>> b=False
+>>> print(a+b)-------------------1
+>>> print(True+True)----------2
+>>> print(False+True+10)----11
+>>> print(True-0b1010)--------    -9
+>>> print(1.2+True)--------------2.2
+>>> print(True-False*0xF)------1
+>>> print(1+3*0b1010)-----------31
+>>> print(False/True)------------0.0
+>>> print(False/False)------------ZeroDivisionError: division by zero--Most Imp
+---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------

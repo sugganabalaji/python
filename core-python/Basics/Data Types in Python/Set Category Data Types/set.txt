@@ -1,0 +1,91 @@
+﻿========================================================
+                                                        set 
+                        ========================================================
+Index
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+=>What is set
+=>Purpose of set
+=>Notations for set
+=>syntax for creating set
+=>Types of set Objects
+=>Memory Management of set
+=>Pre-Defined Functions set
+=>Programming Examples
+=>Inner OR Nested set
+=>Pre-Defined functions in Nested OR Inner set
+=>Combination of sets with list and tuple
+=>Problem statement using Ven Diagrams
+                                i) By using Set Functions / Operations
+                                ii) By using BitWise Operators
+***********************************************************************************************************************************************
+Properties of set
+***********************************************************************************************************************************************
+=>Here 'set' is one of the Pre-Defined Class and Treated as Set data type.
+=>The set data type is used for storing Multiple Unique values either of same type or Different type OR both the Types 
+    in single object.
+=>Programatically, we can store values in set object within Curly Braces { }  and values must be separated by comma.
+=>Syntax:      setobj={ Val1,Val2,.....,Val-n }
+=>An Object of set does not maintain Insertion Order bcoz PVM Display any one of the Possibility of set Elements.
+=>Since set object does not maintain Insertion Order, so that we can't perform Indexing and Slicing Operations.
+=>An Object of set belongs to Both IMMUTABLE in the case of set object does not support Item Assigment and 
+    MUTABLE in the case of adding, removing..etc to the set object at same address.
+=>In Python Programming, we can create Two Types of Set Objects. They are
+                                i) Empty Set
+                                ii) Non-Empty Set
+-------------------------------
+i) Empty Set
+-------------------------------
+=>An Empty set is one, which does not contain any Elements and whose length is 0
+=>Syntax:  setobj=set()
+-------------------------------
+ii) Non-Empty Set
+-------------------------------
+A Non-Empty Set is one, which contains Elements and whose Length is >0
+=>Syntax:    setobj={Val1,Val2,...,Val-n}
+***********************************************************************************************************************************************
+Examples
+***********************************************************************************************************************************************
+>>> s1={10,20,30,40,50,10,20,30}
+>>> print(s1,type(s1))------------------{50, 20, 40, 10, 30} <class 'set'>
+>>> print(s1,type(s1))------------------{50, 20, 40, 10, 30} <class 'set'>
+----------------------------------------------------------------------------------
+>>> s2={10,"RS",34.56,True,False,2+3j,"Python"}
+>>> print(s2,type(s2))--------------------{False, True, 34.56, 'Python', 'RS', 10, (2+3j)} <class 'set'>
+------------------------------------------------------
+>>> s2={10,"RS",34.56,True,False,2+3j,"Python"}
+>>> print(s2,type(s2))-----------------{False, True, 34.56, 'Python', 'RS', 10, (2+3j)} <class 'set'>
+>>> s2[0]------------------------------------TypeError: 'set' object is not subscriptable
+>>> s2[0:4]---------------------------------TypeError: 'set' object is not subscriptable
+-------------------------------------------------------------
+>>> for index,Value in enumerate(s2):
+...                print(index,"---->",Value)
+...
+                        0 ----> False
+                        1 ----> True
+                        2 ----> 34.56
+                        3 ----> Python
+                        4 ----> RS
+                        5 ----> 10
+                        6 ----> (2+3j)
+-------------------------------------------------------
+>>> s2={10,"RS",34.56,True,False,2+3j,"Python"}
+>>> print(s2,type(s2),id(s2))--------------{False, True, 34.56, 'Python', 'RS', 10, (2+3j)} <class 'set'> 2723465870048
+>>> s2[2]=100.56-----------------------------TypeError: 'set' object does not support item assignment
+>>> s2[2]----------------------------------------TypeError: 'set' object is not subscriptable
+>>> s2.add(100.75)
+>>> print(s2,type(s2),id(s2))----------{False, True, 34.56, 'Python', 100.75, 'RS', 10, (2+3j)} <class 'set'> 2723465870048
+>>> s2.remove(34.56)
+>>> print(s2,type(s2),id(s2))---------{False, True, 'Python', 100.75, 'RS', 10, (2+3j)} <class 'set'> 2723465870048
+-------------------------------------------------------------
+>>> s1={}
+>>> print(s1,type(s1))-----------------{} <class 'dict'>
+
+
+>>> s1=set()
+>>> print(s1,type(s1))-----------------set() <class 'set'>
+>>> len(s1)-------------------------------0
+-------------
+>>> s1={10,20,"Python",2.3}
+>>> print(s1,type(s1))------------------{'Python', 10, 20, 2.3} <class 'set'>
+>>> len(s1)--------------------------------4
+=========================================x================================================

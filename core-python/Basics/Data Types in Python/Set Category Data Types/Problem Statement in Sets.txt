@@ -1,0 +1,114 @@
+﻿========================================================
+                                                Problem Statement in Sets
+                        ========================================================
+Consider the following 
+
+
+                        Set of Cricket Players={"Kohli","Rohit","Rossum"}
+                        Set of Tennis Players={"Rossum","Travis","Jhunter"}
+Write the Code  for Solving the Following Questionaire
+
+
+                        1. Find all the Player Names who are Attending the Tournament.
+                        2. Find all the Player Names who are playing Both Cricket and Tennis.
+                        3. Find all the Player Names who are Playing Only Cricket But Not tennis.
+                        4. Find all the Player Names who are Playing Only tennis But Not Cricket .
+                        5. Find all the Player Names who are Exlusively Playing Only Tennis and  Cricket  .
+=============================================================================================
+                                Solution for Problem Statement  by using  Set Functions
+=============================================================================================
+1. Find all the Player Names who are Attending the Tournament----union()
+----------------------------
+ANS:
+>>> cp={"Kohli","Rohit","Rossum"}
+>>> tp={"Rossum","Travis","jhunter"}
+>>> print(cp,type(cp))-----------------------------{'Rossum', 'Kohli', 'Rohit'} <class 'set'>
+>>> print(tp,type(tp))------------------------------{'Rossum', 'jhunter', 'Travis'} <class 'set'>
+>>> allcptp=cp.union(tp)
+>>> print(allcptp,type(allcptp))----------------{'Rossum', 'jhunter', 'Travis', 'Kohli', 'Rohit'} <class 'set'>
+---------------------------------------------------------------------------
+2. Find all the Player Names who are playing Both Cricket and Tennis-------intersection()
+ANS:
+>>> cp={"Kohli","Rohit","Rossum"}
+>>> tp={"Rossum","Travis","jhunter"}
+>>> print(cp,type(cp))-----------------------------{'Rossum', 'Kohli', 'Rohit'} <class 'set'>
+>>> print(tp,type(tp))------------------------------{'Rossum', 'jhunter', 'Travis'} <class 'set'>
+>>> bothcptp=cp.intersection(tp)
+>>> print(bothcptp,type(bothcptp))-----------{'Rossum'} <class 'set'>
+---------------------------------------------------------------------------
+3. Find all the Player Names who are Playing Only Cricket But Not tennis--------difference()
+ANS:
+>>> cp={"Kohli","Rohit","Rossum"}
+>>> tp={"Rossum","Travis","jhunter"}
+>>> print(cp,type(cp))-----------------------------{'Rossum', 'Kohli', 'Rohit'} <class 'set'>
+>>> print(tp,type(tp))------------------------------{'Rossum', 'jhunter', 'Travis'} <class 'set'>
+>>> onlycp=cp.difference(tp)
+>>> print(onlycp,type(onlycp))-----------------{'Kohli', 'Rohit'} <class 'set'>
+---------------------------------------------------------------------------
+4. Find all the Player Names who are Playing Only tennis But Not Cricket ------------difference()
+ANS:
+>>> cp={"Kohli","Rohit","Rossum"}
+>>> tp={"Rossum","Travis","jhunter"}
+>>> print(cp,type(cp))-----------------------------{'Rossum', 'Kohli', 'Rohit'} <class 'set'>
+>>> print(tp,type(tp))------------------------------{'Rossum', 'jhunter', 'Travis'} <class 'set'>
+>>> onlytp=tp.difference(cp)
+>>> print(onlytp,type(onlytp))----------------{'jhunter', 'Travis'} <class 'set'>
+--------------------------------------------------------------------------------------
+5. Find all the Player Names who are Exlusively Playing Only Tennis and  Cricket ----symmetric_difference()
+ANS:
+>>> cp={"Kohli","Rohit","Rossum"}
+>>> tp={"Rossum","Travis","jhunter"}
+>>> print(cp,type(cp))-----------------------------{'Rossum', 'Kohli', 'Rohit'} <class 'set'>
+>>> print(tp,type(tp))------------------------------{'Rossum', 'jhunter', 'Travis'} <class 'set'>
+>>> exclcptp=cp.symmetric_difference(tp)
+>>> print(exclcptp,type(exclcptp))-----------------{'jhunter', 'Travis', 'Kohli', 'Rohit'} <class 'set'>
+=============================================================================================
+                                Solution for Problem Statement  (Don't  Set Functions) 
+                                We can Solve this Problem Statement by using Bitwise Operators
+=============================================================================================
+1. Find all the Player Names who are Attending the Tournament----Bitwise OR ( | )
+----------------------------
+ANS:
+>>> cp={"Kohli","Rohit","Rossum"}
+>>> tp={"Rossum","Travis","jhunter"}
+>>> print(cp,type(cp))-----------------------------{'Rossum', 'Kohli', 'Rohit'} <class 'set'>
+>>> print(tp,type(tp))------------------------------{'Rossum', 'jhunter', 'Travis'} <class 'set'>
+>>> allcptp=cp|tp  # Bitwise OR ( | )
+>>> print(allcptp,type(allcptp))---------------{'Rossum', 'jhunter', 'Travis', 'Kohli', 'Rohit'} <class 'set'>
+---------------------------------------------------------------------------
+2. Find all the Player Names who are playing Both Cricket and Tennis---------Biwise AND ( & )
+ANS:
+>>> cp={"Kohli","Rohit","Rossum"}
+>>> tp={"Rossum","Travis","jhunter"}
+>>> print(cp,type(cp))-----------------------------{'Rossum', 'Kohli', 'Rohit'} <class 'set'>
+>>> print(tp,type(tp))------------------------------{'Rossum', 'jhunter', 'Travis'} <class 'set'>
+>>> bothcptp=cp&tp  # Biwise AND ( & )
+>>> print(bothcptp,type(bothcptp))-----------{'Rossum'} <class 'set'>
+---------------------------------------------------------------------------
+3. Find all the Player Names who are Playing Only Cricket But Not tennis-------- Arithmetic Minus( - )
+ANS:
+>>> cp={"Kohli","Rohit","Rossum"}
+>>> tp={"Rossum","Travis","jhunter"}
+>>> print(cp,type(cp))-----------------------------{'Rossum', 'Kohli', 'Rohit'} <class 'set'>
+>>> print(tp,type(tp))------------------------------{'Rossum', 'jhunter', 'Travis'} <class 'set'>
+>>> onlycp=cp-tp  # Arithmetic Minus( - )
+>>> print(onlycp,type(onlycp))-----------------{'Kohli', 'Rohit'} <class 'set'>
+---------------------------------------------------------------------------
+4. Find all the Player Names who are Playing Only tennis But Not Cricket ---------# Arithmetic Minus( - )
+ANS:
+>>> cp={"Kohli","Rohit","Rossum"}
+>>> tp={"Rossum","Travis","jhunter"}
+>>> print(cp,type(cp))-----------------------------{'Rossum', 'Kohli', 'Rohit'} <class 'set'>
+>>> print(tp,type(tp))------------------------------{'Rossum', 'jhunter', 'Travis'} <class 'set'>
+>>> onlytp=tp-cp  # # Arithmetic Minus( - )
+>>> print(onlytp,type(onlytp))----------------{'jhunter', 'Travis'} <class 'set'>
+--------------------------------------------------------------------------------------
+5. Find all the Player Names who are Exlusively Playing Only Tennis and  Cricket ----Bitwise XOR ( ^ )
+ANS:
+>>> cp={"Kohli","Rohit","Rossum"}
+>>> tp={"Rossum","Travis","jhunter"}
+>>> print(cp,type(cp))-----------------------------{'Rossum', 'Kohli', 'Rohit'} <class 'set'>
+>>> print(tp,type(tp))------------------------------{'Rossum', 'jhunter', 'Travis'} <class 'set'>
+>>> exclcptp=cp^tp  #Bitwise XOR ( ^ )
+>>> print(exclcptp,type(exclcptp))-----------------{'jhunter', 'Travis', 'Kohli', 'Rohit'} <class 'set'>
+=============================================================================================

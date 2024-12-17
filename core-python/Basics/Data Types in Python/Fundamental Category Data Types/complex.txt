@@ -1,0 +1,102 @@
+﻿==========================================================
+                                                4. complex
+                        ==========================================================
+=>'complex' is one of the Pre-Defined Class and treated as Fundamental Category Data Type.
+=>The Purpose of complex data type is that "To Store Complex Values ".
+=>The General Notation Complex Values is Given Bellow.
+                                        a+bj  OR  a-bj  OR   a+bJ OR  a-bJ
+                        Here   'a' is called Real Part
+                        Here  'b' is called Imaginary Part
+                        and Letter 'j' OR J Represents sqrt(-1)   OR   sqr(j OR J)=-1
+=>Internally, the Real and Imaginary Parts of Complex Object are Treated as float type.
+=>Programatically, To get Real and Imagiary Parts of Complex object, we have Two Pre-Defined Attributes Present in Complex Object. They are
+                                                a) real
+                                                b) imag
+                Syntax:   compleobject.real----------->Gives Real part of Complex object
+                                complexobject.imag------->Gives Imaginary Part of Complex Object
+
+
+=>On Complex Objects, we can Perform Different Arithmetic Operations.
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Examples
+----------------------------------------------------------------------------------------------------------------------------------------------------
+>>> a=2+3j
+>>> print(a,type(a))-----------------------------------(2+3j) <class 'complex'>
+>>> b=3-4j
+>>> print(b,type(b))-----------------------------------(3-4j) <class 'complex'>
+>>> c=-3-4j
+>>> print(c,type(c))-----------------------------------(-3-4j) <class 'complex'>
+>>> d=-3+4j
+>>> print(d,type(d))-----------------------------------(-3+4j) <class 'complex'>
+>>> a=2.5+4.6j
+>>> print(a,type(a))----------------------------------(2.5+4.6j) <class 'complex'>
+>>> b=-2.3-4.5j
+>>> print(b,type(b))----------------------------------(-2.3-4.5j) <class 'complex'>
+>>> c=-3.4+4.5j
+>>> print(c,type(c))-----------------------------------(-3.4+4.5j) <class 'complex'>
+------------------------------------------
+>>> a=3j
+>>> print(a,type(a))-------------------------------3j <class 'complex'>
+>>> b=0+5j
+>>> print(b,type(b))------------------------------5j <class 'complex'>
+>>> c=4.5j
+>>> print(c,type(c))------------------------------4.5j <class 'complex'>
+>>> d=-3j
+>>> print(d,type(d))----------------------------(-0-3j) <class 'complex'>
+>>> e=-2.5j
+>>> print(e,type(e))-----------------------------(-0-2.5j) <class 'complex'>
+----------------------------------------------
+>>> a=10+2j
+>>> print(a.real)------------------10.0
+>>> print(a.imag)----------------2.0
+>>> b=-2.3+4.6j
+>>> print(b)--------------------(-2.3+4.6j)
+>>> print(b.real)---------------   -2.3
+>>> print(b.imag)----------------4.6
+>>> c=2.5-5j
+>>> print(c,type(c))-------------(2.5-5j) <class 'complex'>
+>>> print(c.real)-----------------2.5
+>>> print(c.imag)--------------    -5.0
+>>> a=4j
+>>> print(a,type(a))------------4j <class 'complex'>
+>>> print(a.real)---------------0.0
+>>> print(a.imag)--------------4.0
+>>> b= -4.5j
+>>> print(b,type(b))-------------(-0-4.5j) <class 'complex'>
+>>> print(b.imag)---------------   -4.5
+>>> print(b.real)----------------  -0.0
+>>> a=4+0j
+>>> print(a,type(a))---------------(4+0j) <class 'complex'>
+>>> print(a.real)------------------- 4.0
+>>> print(a.imag)------------------0.0
+-------------------------------------------------------------------
+>>> a=3+4j
+>>> print(a,type(a))--------------------(3+4j) <class 'complex'>
+>>> print(a.real)-------------------------3.0
+>>> print(a.imaginary)-----------------AttributeError: 'complex' object has no attribute 'imaginary'
+-------------------------------------------------------------------------------------------------------------------------------
+>>> a=2+3j
+>>> b=3+4j
+>>> c=a+b
+>>> print(c,type(c))--------------(5+7j) <class 'complex'>
+>>> print(2+8j+5+4j)-------------(7+12j)
+------------------------------
+>>> a=2+3j
+>>> b=3+4j
+>>> c=a*b
+>>> print(c,type(c))-------------(-6+17j) <class 'complex'>
+>>> print(2j*4j)------------------(-8+0j)
+>>> print((2+3+4j).real)----------5.0
+>>> print((2*3+4j).real)----------6.0
+>>> print((2*3+4j).imag)----------4.0
+------------------------------------------------------
+>>> print((0b1010+0b1111j).imag)------------------SyntaxError: invalid binary literal
+>>> print(0+0xFacej)-----------------------------------SyntaxError: invalid hexadecimal literal
+>>> a=2+3J
+>>> print(a,type(a))-----------------------------------(2+3j) <class 'complex'>
+----------------------------------------
+>>> a=2+j3------------------------NameError: name 'j3' is not defined
+>>> a=2+3i------------------------SyntaxError: invalid decimal literal
+>>> a=0b1010+2j
+>>> print(a,type(a))----------------------(10+2j) <class 'complex'>
+==========================================x=========================================

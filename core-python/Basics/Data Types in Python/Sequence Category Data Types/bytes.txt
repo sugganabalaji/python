@@ -1,0 +1,56 @@
+﻿=====================================================
+                                                                3. bytes
+                        =====================================================
+=>'bytes' is one of the Pre-Defined Class and treated as Sequence Category Data Type.
+=>The purpose of 'bytes' data type is that "To Implement End-to-End Encryption between Two Remote Applications "
+=>To Implement End-to-End Encryption by the bytes data type, bytes data type oragnizing / storing the Numrical 
+    Values ranges between 0 to 256 ( 0 to 255 only)
+=>In Python Programming, There is no Symbolic Notation for Storing bytes data bcoz Python Programmer can't store 
+    bytes Directly in the Program.
+=>In Python Programming, we can Convert Other Type of Values into bytes object type, by using bytes()
+                        varname=bytes(list / set / tuple / dict )
+=>An Object of bytes maintains Insertion Order Nothing But whatever the Order we store, In the Same Order the Values 
+    will be displayed.
+=>On the Objects bytes, we can perform Both Indexing and Slicing Operations.
+=>An object of bytes belongs to IMMUTABLE bcoz  'bytes' object does not support item assignment
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+Examples
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+>>> lst=[100,0,123,150,256,135,138]
+>>> print(lst,type(lst))----------------------------[100, 0, 123, 150, 256, 135, 138] <class 'list'>
+>>> b=bytes(lst)------------------------------------ValueError: bytes must be in range(0, 256)
+>>> lst=[100,0,-10,123,150,255,135,138]
+>>> print(lst,type(lst))---------------------------[100, 0, -10, 123, 150, 255, 135, 138] <class 'list'>
+>>> b=bytes(lst)-----------------------------------ValueError: bytes must be in range(0, 256)
+----------------------------------------------------
+>>> lst=[100,0,10,123,150,255,135,138]
+>>> print(lst,type(lst))-------------------[100, 0, 10, 123, 150, 255, 135, 138] <class 'list'>
+>>> b=bytes(lst)
+>>> print(b,type(b))--------------------b'd\x00\n{\x96\xff\x87\x8a' <class 'bytes'>
+>>> for v in b:
+...                print(v)
+...
+                                100
+                                0
+                                10
+                                123
+                                150
+                                255
+                                135
+                                138
+-------------------------------------------
+>>> lst=[100,0,10,123,150,255,135,138]
+>>> b=bytes(lst)
+>>> print(b,type(b))------------------b'd\x00\n{\x96\xff\x87\x8a' <class 'bytes'>
+>>> b[0]------------------------100
+>>> b[-1]-----------------------138
+>>> len(b)-----------------------8
+>>> b[0:4]-----------------------b'd\x00\n{'
+>>> for v in b[0:4]:
+...                print(v)
+...
+                                100
+                                0
+                                10
+                                123
+--------------------------------------------------------------------------------------------------------------------------------------------------------

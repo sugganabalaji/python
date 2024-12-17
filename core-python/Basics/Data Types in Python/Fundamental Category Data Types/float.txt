@@ -1,0 +1,47 @@
+﻿===================================================
+                                                        2. float
+                                ===================================================
+=>'float' is one of the Pre-Defined Class and Treated as Fundamental Category Data Type.
+=>The purpose of  float data type is that "To Store Real Constant Value OR Floating Point Value (Numbers with 
+     Decimal  Places) such as Percentage of Academic Exams, Percentile , Comm , .....etc
+=>The float can also be used for Storing Scientific Notation data
+=>The General Format formal of Scientific Notation is  " Mantisa e Exponent".
+=>The Eqv. Floating Point Value for Scientific Notation is  " Mantisa x 10 to Power of Exponent" (here e is 10)
+=>The Advantage of Scientific Notation is "To Minimize the memory space of Biggest Floating Point Values by stroing 
+     in the form of Scientific Notation".
+=>The float data type never the Programmer to Represent Directly Binary, Octal and Hexa But It allows us store 
+    Decimal Number System Values only.
+--------------------------------------------------
+Examples
+--------------------------------------------------
+>>> a=12.34
+>>> print(a,type(a))---------------------------12.34 <class 'float'>
+----------------------------------
+>>> a=3.5
+>>> b=4.5
+>>> c=a+b
+>>> print(a,type(a))---------------------------3.5 <class 'float'>
+>>> print(b,type(b))---------------------------4.5 <class 'float'>
+>>> print(c,type(c))---------------------------8.0 <class 'float'>
+--------------------------------
+>>> a=10
+>>> b=2.5
+>>> c=a+b
+>>> print(a,type(a))--------------------------10 <class 'int'>
+>>> print(b,type(b))-------------------------2.5 <class 'float'>
+>>> print(c,type(c))-------------------------12.5 <class 'float'>
+-------------------------------
+>>> a=3e2
+>>> print(a,type(a))-----------------300.0 <class 'float'>
+>>> b=10e-2
+>>> print(b,type(b))-----------------0.1 <class 'float'>
+>>> a=0.00000000000000000000000000000000000000000000000000000000002
+>>> print(a,type(a))----------------2e-59 <class 'float'>
+>>> a=0.29
+>>> print(a,type(a))----------------0.29 <class 'float'>
+>>> a=2.9e-1
+>>> print(a,type(a))---------------0.29 <class 'float'>
+--------------------------------------------------
+>>> a=0b1010.0o17-----------------------------SyntaxError: invalid decimal literal
+>>> a=0xface.0b1111---------------------------SyntaxError: invalid decimal literal
+-----------------------------------------------------------
