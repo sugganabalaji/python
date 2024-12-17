@@ -1,0 +1,90 @@
+			======================================================
+					6. Membership Operators
+			======================================================
+=>The Purpose of Membership Operators is that "To Check the existence of the Value in Iterable Object".
+=>An Iterable Object is one which contains More Than One Value
+			Example:  str,bytes,bytearray,range
+					  list, tuple,set,frozenset,dict
+=>A Non-Iterable Object is one which contains Only One Value.
+			Example:  int, float, bool, complex, NoneType.
+
+=>In Python Programming, we have 2 Types of Membership Operators. They are
+					1. in
+					2. not in
+------------------------------------------------------------------------------------------------------------------------
+1. in
+------------------------------------------------------------------------------------------------------------------------
+Syntax:      Value in Iterable-object
+=>Here 'in' Operator Returns True Provided Value Present in Iterable-Object
+=>Here 'in' Operator Returns False Provided Value Not Present in Iterable-Object
+------------------------------------------------------------------------------------------------------------------------
+2. not in
+------------------------------------------------------------------------------------------------------------------------
+Syntax:      Value not in Iterable-object
+=>Here 'not in' Operator Returns True Provided Value Not Present in Iterable-Object
+=>Here 'not in' Operator Returns False Provided Value  Present in Iterable-Object
+------------------------------------------------------------------------------------------------------------------------
+Examples
+------------------------------------------------------------------------------------------------------------------------
+>>> s="MISSISSIPPI"
+>>> "M" in s------------------------------True
+>>> "M" not in s-------------------------False
+>>> "S" not in s--------------------------False
+>>> "S" in s-------------------------------True
+>>> "i" in s---------------------------------False
+>>> "i" not in  s--------------------------True
+------------------------------
+>>> s="MISSISSIPPI"
+>>> "MISS" in s-------------True
+>>> "SSI" not in s-----------False
+>>> "SSI" in s----------------True
+-------------------------------------------------
+>>> s="MISSISSIPPI"
+>>> "MSI" in s---------------------False
+>>> "MSI" not in s---------------True
+----------------------------------------------------
+>>> s="PYTHON"
+>>> "NOH" in s-----------------False
+>>> "NHY" not in s------------True
+------------------------------------------------------------------------------------
+>>> lst=[10,"Rossum",23.45,True,2+3j]
+>>> print(lst)-----------------------[10, 'Rossum', 23.45, True, (2+3j)]
+>>> 10 in lst------------------------True
+>>> 23.45 not in lst---------------False
+>>> "ssum" in lst-----------------False
+>>> "ssum" in lst[1]-------------True
+>>> "muss" not in lst[1]-------------True
+>>> "muss" in lst[1][::-1]-----------True
+>>> "muss"[::-1] not in lst[1]-----False
+>>> (2+3j) in lst[-1]-----------------TypeError: argument of type 'complex' is not iterable
+--------------------------------------------------------------------------------------
+>>> lst=[10,"Rossum",23.45,True,2+3j]
+>>> 2.0 in 2+3j-----------------TypeError: argument of type 'complex' is not iterable
+----------------------------------------------------------------------------------
+>>> lst=[10,"Rossum",23.45,True,2+3j]
+>>> lst[-1].real in lst--------------------------------False
+>>> "2+3j" in str(lst[-1])--------------------------True
+>>> "2+3j"[0:2] not in str(lst[-1])[0:2]----------True
+>>> lst[0:2] in lst-------------------------------------False
+>>> lst[0:2]---------[10, 'Rossum']
+>>> lst in lst----------False
+-----------------------------------------------------------------------------------
+>>> d1={10:"apple",20:"Mango",30:"Kiwi"}
+>>> "apple" in d1---------------------False
+>>> 10 in d1--------------------------True
+>>> {10:"apple"} in d1--------------TypeError: unhashable type: 'dict'
+>>> (10,"apple") in d1.items()---------True
+>>> "apple" in d1[10]--------------------True
+>>> "apple" not in d1.values()--------False
+>>> d1.get(30)[0:1] in d1[30][::-1]------True
+==========================================================
+>>> [] in []--------False
+>>> [] in [[]]--------True
+>>> () not in ()--------True
+>>> () not in [()]--------False
+>>> () in [()]--------True
+>>> {} in {{}}-----------------------------------TypeError: unhashable type: 'dict'
+>>> type({})--------<class 'dict'>
+>>> set() in set(set())--------False
+>>>
+------------------------------------------------------------------------------------------------------------------------

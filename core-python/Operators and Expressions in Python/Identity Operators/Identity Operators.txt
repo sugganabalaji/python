@@ -1,0 +1,248 @@
+				=============================================================
+					7. Identity Operators ( Applicable in Python Command Prompt )
+				=============================================================
+=>The purpose of Identity Operators is that "To compare the Memory Address OR Reference of Two Objects".
+
+=>In Python Programming, we have 2 Types of Identity Operators. They are
+				1. is Operator
+				2. is not Operator
+------------------------------------------------------------------------------------------------------------------------
+1. is Operator
+------------------------------------------------------------------------------------------------------------------------
+Syntax:      Object1 is Object2
+=>Here 'is' Operator Returns True Provided Both Object1 and Object2 contains Same Memory Address.
+=>Here 'is' Operator Returns False Provided Both Object1 and Object2 contains Different Memory Address.
+------------------------------------------------------------------------------------------------------------------------
+2. is not Operator
+------------------------------------------------------------------------------------------------------------------------
+Syntax:      Object1 is not Object2
+=>Here 'is not ' Operator Returns True Provided Both Object1 and Object2 contains Different Memory Address.
+=>Here 'is not'  Operator Returns False Provided Both Object1 and Object2 contains Same Memory Address.
+------------------------------------------------------------------------------------------------------------------------
+Examples
+------------------------------------------------------------------------------------------------------------------------
+NOTE1:
+	a) What are all the Object Participates Deep Copy Process then Objects with "is" Operator Returns True
+	b) What are all the Object Participates Deep Copy Process then Objects with "is not" Operator Returns False
+NOTE2:
+	a) What are all the Object Participates Shallow Copy Process then Objects with "is" Operator Returns False
+	b)What are all the Object Participates Shallow Copy Process then Objects with "is not" Operator Returns True
+------------------
+Examples
+------------------
+>>> l1=[10,20,30]
+>>> l2=l1 # Deep Copy
+>>> print(id(l1),id(l2))----------2745045254912 2745045254912
+>>> l1 is l2-------------True
+>>> l1 is not l2--------False
+-------------------------
+>>> l1=[10,20,30]
+>>> l2=l1.copy() # Shallow Copy
+>>> print(id(l1),id(l2))-------------2745045262336 2745045263232
+>>> l1 is l2------------------------False
+>>> l1 is not l2-------------------True
+------------------------------------------------------------------------------------------------------------------------
+Examples
+------------------------------------------------------------------------------------------------------------------------
+>>> a=None
+>>> b=None----------None <class 'NoneType'> 140724253516272
+>>> print(b,type(b),id(b))----------None <class 'NoneType'> 140724253516272
+>>> a is b----------True
+>>> a is not b----------False
+-----------------------------------------
+>>> d1={10:"Apple",20:"Mango",30:"Kiwi"}
+>>> d2={10:"Apple",20:"Mango",30:"Kiwi"}
+>>> print(d1,type(d1),id(d1))----------{10: 'Apple', 20: 'Mango', 30: 'Kiwi'} <class 'dict'> 2745045188480
+>>> print(d2,type(d2),id(d2))----------{10: 'Apple', 20: 'Mango', 30: 'Kiwi'} <class 'dict'> 2745045188096
+>>> d1 is d2----------False
+>>> d1 is not d2----------True
+--------------------------------------------
+>>> s1={10,20,30}
+>>> s2={10,20,30}
+>>> print(s1,type(s1),id(s1))----------{10, 20, 30} <class 'set'> 2745015090560
+>>> print(s2,type(s2),id(s2))----------{10, 20, 30} <class 'set'> 2745009462784
+>>> s1 is s2----------False
+>>> s1 is not s2----------True
+---------------------
+>>> fs1=frozenset(s1)
+>>> fs2=frozenset(s1)
+>>> print(fs1,type(fs1),id(fs1))----------frozenset({10, 20, 30}) <class 'frozenset'> 2745045303360
+>>> print(fs2,type(fs2),id(fs2))----------frozenset({10, 20, 30}) <class 'frozenset'> 2745045303808
+>>> fs1 is fs2----------False
+>>> fs1 is not fs2----------True
+-------------------------------------------------------------
+>>> l1=[10,20,30]
+>>> l2=[10,20,30]
+>>> print(l1,type(l1),id(l1))----------[10, 20, 30] <class 'list'> 2745045256256
+>>> print(l2,type(l2),id(l2))----------[10, 20, 30] <class 'list'> 2745045262336
+>>> l1 is l2----------False
+>>> l1 is not l2----------True
+-----------------------------
+>>> t1=(1.2,2.3,4.5)
+>>> t2=(1.2,2.3,4.5)
+>>> print(t1,type(t1),id(t1))----------(1.2, 2.3, 4.5) <class 'tuple'> 2745045266240
+>>> print(t2,type(t2),id(t2))----------(1.2, 2.3, 4.5) <class 'tuple'> 2745045188544
+>>> t1 is t2----------False
+>>> t1 is not t2----------True
+------------------------------------------------------------
+>>> r1=range(10,21,2)
+>>> r2=range(10,21,2)
+>>> print(r1,type(r1),id(r1))----------range(10, 21, 2) <class 'range'> 2745044989920
+>>> print(r2,type(r2),id(r2))----------range(10, 21, 2) <class 'range'> 2745044988096
+>>> r1 is r2----------False
+>>> r1 is not r2----------True
+>>>
+>>> bs1=bytearray([10,20,30])
+>>> bs2=bytearray([10,20,30])
+>>> print(bs1,type(bs1),id(bs1))----------bytearray(b'\n\x14\x1e') <class 'bytearray'> 2745045289968
+>>> print(bs2,type(bs2),id(bs2))----------bytearray(b'\n\x14\x1e') <class 'bytearray'> 2745045290288
+>>> bs1 is bs2----------False
+>>> bs1 is not bs2----------True
+>>> b1=bytes([10,20,30])
+>>> b2=bytes([10,20,30])
+>>> print(b1,type(b1),id(b1))----------b'\n\x14\x1e' <class 'bytes'> 2745044991024
+>>> print(b2,type(b2),id(b2))----------b'\n\x14\x1e' <class 'bytes'> 2745044991168
+>>> b1 is b2----------False
+>>> b1 is not b2----------True
+--------------------------------------------
+NOTE: when multiple objects of str type Contains SAME CASE, SAME MEANING and SAME Order then the Objects with "is" Operator Returns True and "is not" returns False.
+
+>>> s1="PYTHON"
+>>> s2="PYTHON"
+>>> print(s1,type(s1),id(s1))----------PYTHON <class 'str'> 2745044990640
+>>> print(s2,type(s2),id(s2))----------PYTHON <class 'str'> 2745044990640
+>>> s1 is s2----------True
+>>> s1 is not  s2----------False
+>>>
+>>> s1="THIS"
+>>> s1="TIHS"
+>>> print(s1,type(s1),id(s1))----------TIHS <class 'str'> 2745044991264
+>>> print(s2,type(s2),id(s2))----------PYTHON <class 'str'> 2745044990640
+>>>
+>>> s1="THIS"
+>>> s2="TIHS"
+>>> print(s1,type(s1),id(s1))----------THIS <class 'str'> 2745044990928
+>>> print(s2,type(s2),id(s2))----------TIHS <class 'str'> 2745044987760
+>>> s1 is s2----------False
+>>> s1 is not s2----------True
+>>> s1="THIS"
+>>> s1="RADAR"
+>>> s2="RADAr"
+>>> print(s1,type(s1),id(s1))----------RADAR <class 'str'> 2745044991648
+>>> print(s2,type(s2),id(s2))----------RADAr <class 'str'> 2745044978832
+>>> s1 is s2----------False
+>>> s1 is not s2----------True
+---------------------------------------------------------------
+>>> a=2+2j
+>>> b=2+2j
+>>> print(a,type(a),id(a))----------(2+2j) <class 'complex'> 2745045226064
+>>> print(b,type(b),id(b))----------(2+2j) <class 'complex'> 2745045226000
+>>> a is b----------False
+>>> a is not b----------True
+>>> a=True
+>>> b=True
+>>> print(a,type(a),id(a))----------True <class 'bool'> 140724253516208
+>>> print(b,type(b),id(b))----------True <class 'bool'> 140724253516208
+>>> a is b----------True
+>>> a is not b----------False
+>>> a=1.3
+>>> b=1.3
+>>> print(a,type(a),id(a))----------1.3 <class 'float'> 2745045224528
+>>> print(b,type(b),id(b))----------1.3 <class 'float'> 2745045224464
+>>> a is b----------False
+>>> a is not b----------True
+-----------------------------
+NOTE: when we store the values in the range of 0 to 256 then on Those objects contains Same Address and "is" operator returns True and "is not" returns False.
+NOTE: when we store the values in the more than 256 then on Those objects contains Different Address and "is" operator returns False and "is not" returns True.
+NOTE: when we store the values in the range of -1 to-5 then on Those objects contains Same Address and "is" operator returns True and "is not" returns False.
+NOTE: when we store the values in the  Less than -5 then on Those objects contains Different Address and "is" operator returns False and "is not" returns True.
+-----------------
+>>> a=256
+>>> b=256
+>>> print(a,type(a),id(a))----------256 <class 'int'> 140724254409608
+>>> print(b,type(b),id(b))----------256 <class 'int'> 140724254409608
+>>> a is b----------True
+>>> a is not b----------False
+>>> a=0
+>>> b=0
+>>> print(a,type(a),id(a))----------0 <class 'int'> 140724254401416
+>>> print(b,type(b),id(b))----------0 <class 'int'> 140724254401416
+>>> a is b----------True
+>>> a is not b----------False
+>>> a=257
+>>> b=257
+>>> print(a,type(a),id(a))----------257 <class 'int'> 2745045227344
+>>> print(b,type(b),id(b))----------257 <class 'int'> 2745045227120
+>>> a is b----------False
+>>> a is not b----------True
+>>> a=145
+>>> b=145
+>>> print(a,type(a),id(a))----------145 <class 'int'> 140724254406056
+>>> print(b,type(b),id(b))----------145 <class 'int'> 140724254406056
+>>> a is b----------True
+>>> a is not b----------False
+>>> a=-1
+>>> b=-2
+>>> a is b----------False
+>>> a is not b----------True
+>>> a=-1
+>>> b=-1
+>>> print(a,type(a),id(a))----------> -1 <class 'int'> 140724254401384
+>>> print(b,type(b),id(b))----------> -1 <class 'int'> 140724254401384
+>>> a is b----------True
+>>> a is not b----------False
+>>> a=-5
+>>> b=-5
+>>> print(a,type(a),id(a))----------> -5 <class 'int'> 140724254401256
+>>> print(b,type(b),id(b))----------> -5 <class 'int'> 140724254401256
+>>> a is b----------True
+>>> a is not b----------False
+>>> a=-6
+>>> b=-6
+>>> print(a,type(a),id(a))----------> -6 <class 'int'> 2745045228272
+>>> print(b,type(b),id(b))----------> -6 <class 'int'> 2745045228304
+>>> a is b---------- False
+>>> a is not b---------- True
+--------------------------------------------
+Most Special----All Fundamental values with Same Value of any range with Multi Line assignment and with those contains Same address
+>>> a,b=1.2,1.2
+>>> print(a,type(a),id(a))----------1.2 <class 'float'> 2745045224528
+>>> print(b,type(b),id(b))----------1.2 <class 'float'> 2745045224528
+>>> a is b----------True
+>>> a is not b----------False
+>>> a,b=2+3.4j,2+3.4j
+>>> print(a,type(a),id(a))----------(2+3.4j) <class 'complex'> 2745045228752
+>>> print(b,type(b),id(b))----------(2+3.4j) <class 'complex'> 2745045228752
+>>> a is b----------True
+>>> a is not b----------False
+-------------------------------------------
+>>> a,b=[10,20,30],[10,20,30]
+>>> print(a,type(a),id(a))----------[10, 20, 30] <class 'list'> 2745045364160
+>>> print(b,type(b),id(b))----------[10, 20, 30] <class 'list'> 2745045261440
+>>> a is b----------False
+>>> a is not b----------True
+=========================================x========================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------

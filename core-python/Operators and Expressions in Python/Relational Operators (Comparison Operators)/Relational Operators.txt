@@ -1,0 +1,29 @@
+			======================================================
+					3. Relational Operators ( Comparison Operators)
+			======================================================
+=>The Purpose of Relational Operators is that "To Compare Two Values".
+=>If Two Values  Connected with Relational Operators then It is called Relational Expression.
+=>The Result of Relational Expression is either True OR False.
+=>The Relational Expression is also Called Test Condition(Simple Condition) and whose Result can be either True OR False.
+=>In Python Programming, we have 6 Relational Operators. They are given in the following Table.
+---------------------------------------------------------------------------------------------------------------------
+SLNO		SYMBOL			  MEANING			EXAMPLES
+---------------------------------------------------------------------------------------------------------------------
+1.		      >				greater than		print(10>2)------------------True
+												print(100>200)--------------False
+
+2.		      <				less than			print(10<20)-----------------True
+
+3.		      ==			Equality			print(10==10)----------------True
+		(Double equal to)						print(10==20)----------------False
+
+4.			  !=			Not equal to		print(10!=20)----------------True
+												print(10!=10)----------------False
+
+5.		      >=			greater than		print(10>=20)---------------False
+							or equal to			print(10>=5)-----------------True
+
+6.			  <=			less than			print(10<=20)---------------True
+							or equal to			print(10<=5)-----------------False
+---------------------------------------------------------------------------------------------------------------------
+
