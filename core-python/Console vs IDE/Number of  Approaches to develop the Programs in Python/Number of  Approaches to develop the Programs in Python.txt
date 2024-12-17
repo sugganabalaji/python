@@ -1,0 +1,86 @@
+﻿                               =========================================================
+                                Number of  Approaches to develop the Programs in Python
+                               =========================================================
+--------------------------------
+Definition of Program
+--------------------------------
+=>Set of Optimized Instructions is called Program
+=>Optimized Instructions are Nothing But They Must Less Time Complexity and Less Space Complexity.
+--------------------------------
+Need of Writing the Program
+--------------------------------
+=>The Need of Writing the Program is that "To Implement any Manual work into Automated Application".
+=>As we know that a Program is a Collection of Optimized Instructions and those Optimized Instructions must be saved
+    on Name (called File Name) with extension .py (FileName.py).
+-----------------------------------------------------
+=>In Python , we have Two Approaches to develop the Programs. They are
+
+                1. By using Interactive Approach
+                2. By using Batch Mode Approach
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. By using Interactive Approach
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+=>In Interactive Approach, Python Programmer can Issue One statement at a time and Gets Corresponding Statement Output at a time.
+=>Interactive Approach is useful To Test One Instruction at a time only.
+=>The Interactive Approach is unable to provide the Facility of Save the Instructions and More Over we are unable to Re-use the Code.
+=>Interactive Approach is not recommended to Develop Big Problem Solving Statements.
+------------------------------
+Example Software's:
+------------------------------
+            Python Command Prompt
+            Python IDLE Shell--------------------comes along Python Software Installation
+---------------------------
+Example Code        
+---------------------------
+>>> a=10
+>>> b=20
+>>> c=a+b
+>>> print(a)---------------10
+>>> print(b)---------------20
+>>> print(c)---------------30
+NOTE: To Develop Big Problem-Solving Statements, we must use Batch Mode Approach.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. By using Batch Mode Approach
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+=>In Batch Mode Approach, Python Programmer will develop set of Optimized Instructions (batch)  and Save on Name (File Name) with an extension called .py (FileName.py).
+------------------------------
+Example Software's
+------------------------------
+        1. Python IDLE Shell   (Not Recommended to Use in Real Time)
+        -----------------------------------
+        2. Universal IDE(Integrated Development Environment) (popular to Real Time)
+        --------------------------
+                        PyCharm
+                        Jupiter Note Book
+                        Spider
+                        VS Code
+                        Google Colab
+                        Sublime text....etc
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+NOTE: To Run the Python Program from Windows Command Prompt, we use Two Tools. They are
+                        1. python
+                        2. py
+                Syntax:       python FileName.py
+                                    OR
+                              py FileName.py
+Here 'python' and 'py' are present in  C:\Users\Balaji\AppData\Local\Programs\Python\Python313 Folder.
+--------------------------------------
+Examples
+--------------------------------------
+E:\BALAJI-PYTHON\BATCH MODE>py AddEx3.py
+Enter Value of a:4
+Enter Value of b:5.6
+**************************************************
+Val of a=4.0
+val of b=5.6
+Sum=9.6
+**************************************************
+
+E:\BALAJI-PYTHON\BATCH MODE>py MulEx.py
+Enter Value of a:5
+Enter Value of b:7
+**************************************************
+Val of a=5.0
+val of b=7.0
+Mul=35.0
+**************************************************

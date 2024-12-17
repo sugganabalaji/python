@@ -1,0 +1,10 @@
+Write a Python program, which will accept 2 numerical values,and find their sum.
+
+Write a Python program, which will accept 2 numerical values,and find their product.
+
+H/W - Write a Python program, Which will calculate Circumference Or Perimeter of circle? H/W
+formula 2*PI*r = 2* 3.141 *r
+H/W - Write a Python program, To calculate Area of Rectangle? formula:lb
+
+H/W - Write a Python program, To calculate Circumference of a Circle? formula:
+H/W - Write a Python program, To calculate Circumference of a Rectangle? formula: 2xl+b
