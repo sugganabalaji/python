@@ -1,0 +1,37 @@
+			=========================================================
+							1. Simple
+			=========================================================
+=>Python is One of the SIMPLE Programming Language  bcoz of THREE Important Technical Factors. They are
+--------------------------------------------
+Factor-1
+--------------------------------------------
+=>Python Programming Lang Provides "Rich Set of MODULES". 
+=>So that Python Programmers are Re-Using the Pre-Defined Code Present in MODULES. So that Python Programmers 
+   Feels Much easier to write the code in real time.
+*****************************
+Definition of Module
+*****************************
+=>A Module is a Collection of Functions, Data Members and Class Names.
+Examples:   math,calendar,random,os,csv,json,threading.....etc
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+Factor-2: Garbage Collection--Memory Management
+------------------------------------------------------------------------------
+=>Python Programming Contains In-Built facility Called "Garbage Collector". So that Garbage Collector Runs Behind of Every Python Program and It Collects Un-Used Memory Space and Improves the Performance of Python Program.
+**********************************************
+Definition of Garbage Collector
+**********************************************
+=>The Garbage Collector is one of Python Pre-Defined Background Program along with python Software, and It Runs along with Regular Python Program and whose Role is To collect Un-Used (un-referenced) Memory space and It Improves the Performance of Python Based Applications
+**********************************************
+=>Hence Python Garbage Collector Takes care about Automatic Memory Management.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+Factor-3
+--------------------------------------------
+=>Python Programming Provides User-Friendly Syntaxes. So that Python Programmer can develop Error-Free Programs in Limited Span of Time
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Python & Full Stack Python @ 11 00 AM IST by Mr  K V Rao 
+(14.10.24) Day-1 https://youtu.be/2-VEaPrgTj8
+(15.10.24) Day-2 https://youtu.be/WYMHvXTPRS8
+(16.10.24) Day-3 https://youtu.be/DghlYeLo694
+(17.10.24)Day-4 https://youtu.be/exS4njJQTFQ
+(18.10.24)Day-5 https://youtu.be/7fLulGgZmsM

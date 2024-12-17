@@ -1,0 +1,97 @@
+﻿====================================================
+                                        Data Representation 
+                        ====================================================
+Index
+---------------
+=>What is Data 
+=>Types of Literals OR Values 
+=>Importance of Identifiers OR Variables
+=>Rules for Using  Identifiers OR Variables In Python Program
+=============================================================================================
+                                                What is Data 
+=============================================================================================
+=>The Processed Information is called Data.
+=>The purpose of Collecting Data is that "To Take Effective Decisions".
+=>The Data always stored in Main Memory (RAM),Processed in Main Memory and Results Displayed on the Moniter 
+    and to Store the Data Permanently in Secondary Memory (Hard Disk).
+=>Structured Format is called Data whereas Un-Structured Format is called Information.
+=============================================================================================
+                                Types of Literals OR Values 
+=============================================================================================
+=>A Literal is a Value OR Data obtained from Given Information to Process.
+=>In Python Programming, Boradly, Literals OR Values  are classified into 5 Types. They are
+
+
+                1. Integer Literals
+                2. String literals
+                3. float literals
+                4. boolean literals
+                5. collection literals
+=>All the Literals are called "Data" and need to store in Main Memory (RAM)
+=============================================================================================
+                                        Importance of Identifiers OR Variables
+=============================================================================================
+=>In Any Programming Language, Literals Must be Stored in Main Memory by allocating Sufficient  Amount of Memory space with the Help Of Data Types.
+=>We know that All types Literals are stored in main memory by having memory space.
+=>To Process values which are present in memory space , Programmers must give DISTINCT NAMES to the created memory spaces. These DISTINCT NAMES makes us to identify the values present in memory space and hence they are called IDENTIFIERS.
+=>The IDENTIFIER Values are Changing/ Varying during Program Execution and hence IDENTIFIERS are also called  VARIABLES.
+=>Hence All types of LITERALS are stored in the form of VARIABLES and all Variables are called OBJECTS.
+-------------------------------
+Definition of variable
+-------------------------------
+=>A Variable is an Identifier whose Value can be changed during Program Execution.
+=============================================================================================
+                        Rules for Using  Identifiers OR Variables In Python Program
+=============================================================================================
+=>To use Identifiers OR Variables In Python Program, we we follow the following Rules.
+
+
+Rule-1:         A Variable Name is a Combination of Alphabets, Digits and a Special Symbol Under Score ( _ ).
+------------
+
+
+Rule-2:    First Letter of the Variable Name must starts either with Alphabet or Under Score ( _ ).
+-------------
+                        Examples:
+                        ---------------
+                                        1sal=45---invalid
+                                        -sal=45---Invalid
+                                        $sal=5.6---invalid
+                                        sal=45--valid
+                                        _sal=45--valid
+                                        sal1=45--valid
+                                        sal?=45--invalid
+                                        __=34---valid
+                                        _sal_=45--valid
+------------
+Rule-3:  Within the Variable Name, No Special Symbols are allowed except under score ( _ )                
+------------
+                        Examples:
+                        -----------------
+                                        emp sal=56---invalid
+                                        emp-sal=45--Invalid
+                                        emp?sal=45--invalid
+                                        emp_34=34---valid
+                                        emp$sal=56--invalid
+------------
+Rule-4        No Keywords to be taken OR Used as Variable Names [ A Keyword is a Reserved Word which gives specific 
+------------ meaning to the Language Compilers)
+                
+                Examples:
+                -----------------
+                                        True=56---Invalid
+                                        False=56--invalid
+                                        false=45---valid
+                                        if=45--invalid
+                                        if1=45--valid
+------------
+Rule-5                All the Variables in Python are Case Senstive
+------------
+                Examples
+                --------------
+                >>>age=99
+                >>> AGE=98
+                >>> Age=97
+                >>> aGe=96
+                >>> print(age,AGE,Age,aGe,aGe)----- 99  98   97 96
+=============================================================================================

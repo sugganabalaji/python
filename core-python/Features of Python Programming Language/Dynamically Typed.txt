@@ -1,0 +1,39 @@
+				==================================================
+						3. Dynamically Typed 
+				==================================================
+=>In IT, we have Two Types of Programming Languages. They are
+
+			1. Static Typed Programming Languages
+			2. Dynamically Typed Programming Languages
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+1. Static Typed Programming Languages
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+=>In Static Typed Programming Languages, It is Mandatory to Declare the Variables for Storing the Data Otherwise we get Compile Time Error.
+-------------------------
+Program in Java
+--------------------------
+int a,b,c; // Variable Declaration
+a=10;
+b=20;
+c=a+b
+System.out.println(a+" "+b+" "+c)
+-----------------------------------------------------
+The Limitations of Static Typed Programming Languages are
+			1. The Programmer May not be knowing Extact Data type of the Value.
+			2. It Never allows us to store other Types of Values once It is Static typed.
+
+Examples:  C,C++, Java, C#.net 
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+2. Dynamically Typed Programming Languages
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+=>In Dynamically Typed Programming Languages, There is no need to define Variable Declaration.
+=>In Otherwords, Dynamically Typed Programming Languages, Python Programming Lang Execution Environment 
+   automatically OR Implicitly will assign the Data type depends on type of values assigned to the Variable name.
+=>The Advantages of Dynamically Typed Programming Languages are
+
+			1. The Programmer Need not Know the Data type of Value.
+			2. It allows us to assign any Type of value dynamically, and automatically whose Type Changed 
+			   dynamically.
+
+Examples:  PYTHON
+-------------------------------------------------------------------------------------------------------------------------------------------------------
