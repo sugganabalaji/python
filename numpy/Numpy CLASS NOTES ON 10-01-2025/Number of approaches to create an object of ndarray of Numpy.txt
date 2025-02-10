@@ -1,0 +1,36 @@
+			===============================================================
+					Number of approaches to create an object of ndarray of Numpy
+			===============================================================
+=>We know that, ndarray is a Pre-Defined Class Present in numpy module
+=>The ndarray is that "To store the Data either in the for 1-D OR 2-D or n-D by treating all the values as same type".
+=>As Part of Numpy Programming, we can create an object of ndarray with the following ways.
+
+				1. array()
+				2. arange()
+				3. zeros()
+				4. ones()
+				5. full()
+				6. linspace()
+				7. identity()
+				8. eye()
+				9. hstack()
+				10. vstack()
+				----------------------
+				numpy.random
+				-----------------------
+					11. randint()
+					12.randn()
+					13. normal()
+					14. rand()
+					15. uniform()
+					16. choice()
+					17. shuffle()
+============================================================================================
+1. array()
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Syntax:    varname=numpy.array(object,dtype)
+=>This Function is used converting Traditional Object into ndarray Object.
+=>Here varname Represents an object of <class, numpy.ndarray>
+
+
+
