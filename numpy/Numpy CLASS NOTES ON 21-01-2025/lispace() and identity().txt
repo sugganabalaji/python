@@ -1,0 +1,17 @@
+==================================================================================================
+					6. linspace()
+==================================================================================================
+Syntax:     varname = numpy.linspace(start, stop, num, endpoint, retstep, dtype)   
+=>start: It represents the starting value of the interval.
+=>stop:It represents the stopping value of the interval.
+=>num: The amount of evenly spaced samples over the interval to be generated. The default is 50.
+=>endpoint: Its true value indicates that the stopping value is included in the interval.
+=>rettstep: This has to be a boolean value. Represents the steps and samples between the consecutive numbers.
+=>dtype: It represents the data type of the array items.
+=================================================================================================
+					7. identity():
+===============================================================================================
+=>This function always bulid Identity or unit matrix 
+=>Syntax:-  varname=numpy.identity(N,dtype)
+=>Here N represents Either we can take Rows or Columns and PVM takes as NXN Matrix (Square Matrix--Unit or Identity)
+===============================================================================================
