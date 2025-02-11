@@ -1,0 +1,23 @@
+					 eye()
+===============================================================================================
+=>The eye() function is used to create a 2-D array with ones on the diagonal and zeros elsewhere.
+=>The eye() function is commonly used in linear algebra and matrix operations. It is useful for generating matrices to transform, rotate, or scale vectors. It can also be used in scientific computing for solving differential equations, optimization, and signal processing.
+-------------------------
+Syntax:   numpy.eye(N, M=None, k=0, dtype)
+-------------------------
+N---->Number of rows in the output.	
+M--->Number of columns in the output. If None, defaults to N.	
+k--->	Index of the diagonal: 0 (the default) refers to the main diagonal, a positive value refers to an upper diagonal, and		a negative value to a lower diagonal.	
+dtype--->Data-type of the returned array.	
+===============================================================================================
+				hstack()
+===============================================================================================
+		varname=numpy.hstack((ndarrayobj1,ndarrayobj2))
+
+=>The function nnumpy.hstack(tup) takes arguments as tuple which include matrix's/arrays. The hstack function combines the two or more matrix/arrays horizontally which have the same number of rows. The hstack returns an ndarray.
+===============================================================================================
+				vstack()
+===============================================================================================
+		varname=numpy.vstack((ndarrayobj1,ndarrayobj2))
+=>The function nnumpy.vstack(tup) takes arguments as tuple which include matrix's/arrays. The vstack function combines the two or more matrix/arrays Verticaly which have the same number of Columns. The vstack returns an ndarray.
+===========================================================================================
