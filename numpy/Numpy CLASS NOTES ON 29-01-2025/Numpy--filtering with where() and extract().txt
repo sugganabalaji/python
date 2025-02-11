@@ -1,0 +1,122 @@
+		==========================================
+			Introduction to Filtering NumPy Arrays
+		==========================================
+=>Filtering refers to the process of selecting a subset of data that meets certain criteria from a larger dataset. NumPy provides vectorized filtering functions that enable us to quickly filter values in an array based on conditional logic, without slow Python-level looping.
+
+=>The main benefits of using NumPy’s filtering functions include:
+
+		1) Speed - Filtering is performed at compiled C speed, avoiding slow Python loops
+		2) Convenience - Express element selection using conditional logic 
+		3) Readability - Code is more explicit about the filtering criteria
+=>For Filtering the Data , we have Two Functions. They are
+				1. where()
+				2. extract()
+-----------------------------------------------------------------
+1. where()
+-----------------------------------------------------------------
+=>The where() function allows us to filter an array based on a given condition. 
+Syntax:    np.where(condition, x, y)
+=>If the Condition is True then selects elements from x (ndarray)
+=>If the Condition is False then selects elements from y (ndarray)
+=>The x and y parameters are optional, but at least one must be provided.
+---------------
+Syntax:    np.where(condition)
+=>This Syntax gives Array Indices of those Elements which satisfies Condition.
+=>Pass the Array of Indices to ndarray object and we get Result.
+-----------------------------------------------------
+Filtering with Scalar Values
+------------------------------------------------------
+Here we filter a 1D array using a scalar value for the condition:
+import numpy as np
+a = np.array([1, 2, 3, 4])
+# Values greater than 2
+np.where(a > 2, a, 100)
+
+# Output: array([100, 100,  3,  4])
+----------------------------------------------
+Filtering with Array Values
+-----------------------------------------------
+We can also use arrays for any of the arguments. Here we provide array values for x and y:
+a = np.array([1, 2, 3, 4])
+x = np.array([10, 20, 30, 40])
+y = np.array([100, 200, 300, 400])
+np.where(a > 2, x, y)
+
+# Output: array([100, 200,  30,  40])
+---------------------------------------------------------
+Filtering with Multiple Criteria
+----------------------------------------------------------
+=>Multiple conditional tests can be specified by passing the condition as a boolean array:
+
+import numpy as np
+a = np.array([1, 2, 3, 4])
+criteria = (a < 2) | (a > 3)
+np.where(criteria, 0, a)
+
+# Output------array([0, 2, 3, 0])
+Here we replaced values meeting either conditional test with 0.
+----------------------------------------------------------------------------------------------------------------------------------------------------
+2. extract() 
+----------------------------------------------------------------------------------------------------------------------------------------------------
+=>The extract() function provides a more direct way to filter arrays. 
+=>It selects elements based on a condition and returns only those elements, rather than a new array with the same shape.
+=>syntax:  np.extract(condition, arr)
+---------------------------------------------------------------------------
+Examples
+---------------------------------------------------------------------------
+This example extracts values greater than 2:
+import numpy as np
+a = np.array([1, 2, 3, 4])
+np.extract(a > 2, a)
+# Output: array([3, 4])-------------------Only the elements meeting the criteria are returned.
+---------------------------------------------------------
+Conditional Extraction
+---------------------------------------------------------
+We can pass more complex conditional tests using boolean operators:
+a = np.array([1, 2, 3, 4])
+criteria = (a < 2) | (a > 3)
+np.extract(criteria, a)
+# Output: array([1, 4])
+------------------------------------------------------------------------------------------------------------------------------------
+Practical Examples and Use Cases
+------------------------------------------------------------------------------------------------------------------------------------
+Now let’s go through some practical examples of how where() and extract() can be used for filtering data in real-world scenarios.
+-------------------------------------------------------
+Working with Missing Data
+-------------------------------------------------------
+=>It is common to encounter missing values encoded as NaN or None in real-world datasets. We can use filtering to remove or replace these missing values:
+import numpy as np
+data = np.array([1, 2, None, 3, 4])
+# Replace missing with 0
+data=np.where(data==None, 0, data)
+# Output: array([1, 2, 0, 3, 4])
+
+# Filter missing values
+data=np.extract(data!=None, data)
+
+# Output: array([1, 2, 3, 4])
+----------------------------------------------------------------
+Data Cleaning
+----------------------------------------------------------------
+Filtering functions enable removing unwanted outliers or invalid values:
+----------------------------------------------------------------
+ages = np.array([15, 99, 87, 21, 67])
+
+# Remove invalid ages
+valid_ages = np.extract(ages < 90, ages)
+
+print(valid_ages)
+# [15 87 21 67]
+---------------------------------------------------------------------------------------------------------------------------------------------
+Reducing Memory Usage
+---------------------------------------------------------------------------------------------------------------------------------------------
+Since extract() returns only the filtered elements, it can reduce memory usage compared to where() when filtering large arrays:
+
+big_array = np.random.random(100000)
+# Lots of memory used to store full array
+filtered = np.where(big_array < 0.1, None,big_array)
+# Less memory for extracted elements
+extracted = np.extract(big_array < 0.1, big_array)
+-------------------------------------------------------------------------------------------------------------------------------------------------
+So extract() is useful for extracting a relatively small number of values from a large array.
+-------------------------------------------------------------------------------------------------------------------------------------------------
