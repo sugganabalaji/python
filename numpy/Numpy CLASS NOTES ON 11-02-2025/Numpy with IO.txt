@@ -1,0 +1,153 @@
+import numpy as np
+import csv
+
+# Create a NumPy array with both numeric and string data
+data_array = np.array([
+    [1, 'GUIDO ROSSUM', 95.5],
+    [2, 'TRAVIS OLIPHANT', 90.0],
+    [3, 'DENNIS RITCHE', 80.0],
+    [4, 'JHON HUNTER', 91.5]
+], dtype=object)
+
+# Define the path to the output CSV file
+csv_file_path = 'output1.csv'
+
+# Write the NumPy array to a CSV file
+with open(csv_file_path, 'w') as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerows(data_array)
+# Print a message indicating the CSV file has been written
+print(f"Data has been written to {csv_file_path}")
+----------------------------------------------------------------------------
+			OR
+----------------------------------------------------------------------------
+import numpy as np
+import csv
+
+# Create a NumPy array with both numeric and string data
+data_array = np.array([
+    [1, 'GUIDO ROSSUM', 95.5],
+    [2, 'TRAVIS OLIPHANT', 90.0],
+    [3, 'DENNIS RITCHE', 80.0],
+    [4, 'JHON HUNTER', 91.5]
+], dtype=object)
+
+# Define the path to the output CSV file
+csv_file_path = 'output.csv'
+
+# Write the NumPy array to a CSV file
+with open(csv_file_path, 'w') as csvfile:
+    writer = csv.writer(csvfile)
+    for row in data_array:
+        writer.writerow(row)
+
+# Print a message indicating the CSV file has been written
+print(f"Data has been written to {csv_file_path}")
+==========================================================================
+data1.csv
+-------------------
+ID,Name,Score
+1,GUIDO ROSSUM,95.5
+2,TRAVIS OLIPHANT,90.0
+3,'DENNIS RITCHE,80.0
+4,JHON HUNTER,91.5
+-----------------------
+import numpy as np
+
+# Define the path to the CSV file
+csv_file_path = 'data1.csv'
+
+# Define the data types for each column
+dtype = [('ID', 'i4'), ('Name', 'U10'), ('Score', 'f4')]
+
+# Read the CSV file into a structured NumPy array
+structured_array = np.genfromtxt(csv_file_path, delimiter=',', dtype=dtype, names=True)
+
+# Print the structured NumPy array
+print(structured_array,type(structured_array))
+==============================================================================================
+
+import numpy as np
+
+# Create a NumPy array
+data_array = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+
+# Define the path to the text file
+text_file_path = 'data.txt'
+
+# Save the NumPy array to a text file with space as the delimiter
+np.savetxt(text_file_path, data_array, delimiter=' ')
+
+# Read the text file back into a NumPy array
+loaded_array = np.loadtxt(text_file_path, delimiter=' ')
+
+# Print the original and loaded NumPy arrays
+print("Original NumPy Array:")
+print(data_array)
+
+print("\nLoaded NumPy Array from Text File:")
+print(loaded_array.astype(int))
+===================================================================================================
+import numpy as np
+
+# Create a NumPy array
+data_array = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+
+# Define the path to the binary file
+binary_file_path = 'data.npy'
+#The .npy format is the standard binary file format in NumPy for persisting a single arbitrary NumPy array on disk.
+
+# Save the NumPy array to a binary file using np.save
+np.save(binary_file_path, data_array)
+
+# Load the NumPy array from the binary file using np.load
+loaded_array = np.load(binary_file_path)
+
+# Print the original and loaded NumPy arrays
+print("Original NumPy Array:")
+print(data_array)
+
+print("\nLoaded NumPy Array from Binary File:")
+print(loaded_array)
+=======================================================================================================
+Content of sample.json
+-----------------------------
+{
+    "Title": "The Cuckoo's Calling",
+    "Author": "Robert Galbraith",
+    "Genre": "classic crime novel",
+    "Detail": {
+        "Publisher": "Little Brown",
+        "Publication_Year": 2013,
+        "ISBN-13": 9781408704004,
+        "Language": "English",
+        "Pages": 494
+    },
+    "Price": [
+		{
+		    "type": "Hardcover",
+		    "price": 16.65
+		},
+		{
+		    "type": "Kidle Edition",
+		    "price": 7.03
+		}
+		]
+}
+-----------------
+import numpy as np
+import json
+
+# Define the path to the JSON file
+json_file_path = 'sample.json'
+
+# Read the JSON file into a Python list
+with open(json_file_path, 'r') as json_file:
+    data_list = json.load(json_file)
+
+# Convert the list to a NumPy array
+data_array = np.array(data_list)
+
+# Print the NumPy array
+print(data_array)
+====================================================================================================
