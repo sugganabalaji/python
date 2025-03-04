@@ -66,12 +66,12 @@ print(df)
 tpl=( ("Rossum",75), ("Gosling",85), ("Travis",65), ("Ritche",95),("MCKinney",60) )
 df=pd.DataFrame(tpl, index=[1,2,3,4,5],columns=['Name','Age'])
 print(df)
-		Name    Age
-	1    Rossum   75
-	2   Gosling     85
-	3    Travis      65
-	4    Ritche      95
-	5  MCKinney  60
+		Name     Age
+	1   Rossum   75
+	2   Gosling  85
+	3   Travis   65
+	4   Ritche   95
+	5   MCKinney 60
 -------------------------------------------------------------------------------------
 Creating an object DataFrame by Using dict object
 --------------------------------------------------------------------
