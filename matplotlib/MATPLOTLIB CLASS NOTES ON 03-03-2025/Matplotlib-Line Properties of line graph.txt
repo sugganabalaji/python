@@ -1,0 +1,19 @@
+===============================================================================================
+		Line Properties of line graph
+===============================================================================================
+	plt.plot(x,y,ls,lw,c)
+	    x--->Set of Values on x-axis
+	    y--->Set of Values on Y-Axis
+	    ls----->line style---
+			The line style value can be one of the following:
+			Line Syntax	     Description
+			'-'				Solid line	
+			':'				Dotted line	
+			'--'				Dashed line	
+			'-.'				Dashed/dotted line
+
+					OR
+			line style--- solid      dotted   dashed   dashdot   None
+	   lw------->line width------10 11 12...20...etc
+	   c--------->Line color----r,g,y,hotpink...etc
+===============================================================================================
