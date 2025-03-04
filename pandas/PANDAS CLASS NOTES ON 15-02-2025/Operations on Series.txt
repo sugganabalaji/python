@@ -1,0 +1,64 @@
+----------------------------------------------------
+Today Topic: Operations on Series
+----------------------------------------------------
+				1. Adding the Series of Values
+						Syntax:     SeriesObj3=SeriesObj1.add(SeriesObj2)
+								   SeriesObj3=SeriesObj1.add(SeriesObj2,fill_value=0)
+	
+				2. Substracting the Values of Series
+						Syntax:     SeriesObj3=SeriesObj1.sub(SeriesObj2)
+								SeriesObj3 = SeriesObj1.sub(SeriesObj2,fill_value=0)
+
+				3. Droping the Values of Series
+						Syntax:	SeriesObj.drop([Index])
+								SeriesObj.drop([Label])
+								SeriesObj.drop([Index1,index2,.....,Index-n])
+								SeriesObj.drop([Label1,Label2,.....Label-n])
+								SeriesObj.drop([Index1,index2,.....,Index-n],inplace=True)
+								SeriesObj.drop([Label1,Label2,.....Label-n],Inplace=True)
+
+				4. Finding Number of Missing values(NaN,None,NA)
+							Syntax:   SeriesObj.isna()
+									SeriesObj.isna().sum()
+									SeriesObj.isnull()
+									SeriesObj.isnull().sum()
+
+				5. Sorting the Values of Series
+							Syntax:   seriesobj.sort_values(ascending,inplace)
+									seriesobj.sort_values()
+									seriesobj.sort_values(inplace)
+									seriesobj.sort_values(ascending)
+
+				6. Finding Max / Highest Element from Series and Number Approaches
+							Syntax:   SeriesObj.max()
+									SeriesObj.nlargest(n)
+				6. Finding Min / smallest Element from Series and Number Approaches
+							Syntax:   SeriesObj.min()
+									SeriesObj.nsmallest(n)
+				
+				8. Finding Unique Values from Series 
+							Syntax:    serobj.unique()
+				9 Finding Number of Unique Values from Series 
+							Syntax:  serobj.nunique()
+				10. Display Unique Values from Series Object.
+							Syntax:   serobj.value_counts()
+				11. Statistical Operations on Series Object
+							Syntax:           seriesobj.sum()
+										seriesobj.count()
+										seriesobj.max()
+										seriesobj.min()
+										seriesobj.mean()
+										seriesobj.median()
+										seriesobj.var()
+										seriesobj.std()
+										seriesobj.mode()	
+										seriesobj.describe()
+										print(seriesobj.agg(["max","min","mean".........]))
+										seriesobj.product()
+										seriesobj.cumprod()
+--------------------------------------------------------------------------------------------------------------------------------------------
+									
+
+
+
+				
