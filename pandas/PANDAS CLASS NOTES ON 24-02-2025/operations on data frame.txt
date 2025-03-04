@@ -1,0 +1,242 @@
+
+From Athar (privately):    9:36 AM
+on this topic Complex groupby operations interviewer gave me system test sir 
+============================================================
+Attributes of DataFrame
+------------------------------------------
+		1. index
+		2. columns
+		3. dtypes
+		4. axes
+		5. size
+		6. shape
+		7. ndim
+		8. empty
+		9. values
+		10. T
+-------------------------------------------------------------------------------------------------------------------------------------
+		How To access the Data from DataFrame Object
+----------------------------------------------------------------------------------------------------------------------------------------------------
+		DataFrmObj.head()   OR  DataFrmObj.head(n)
+		DataFrmObj.tail()   OR  DataFrmObj.tail(n)
+		DataFrmObj.describe() OR  DataFrmObj.describe(include='all')
+		-----------------------------
+		DataFrameObj.iterrows()
+		------------------------------------------
+		DataFrameObj[Start:Stop:Step]	
+		DataFrameObj["ColName"]
+		DataFrameObj [ ["ColName1","ColName2",....,"ColName-n"] ]
+		DataFrameObj [ ["ColName1","ColName2",....,"ColName-n"]] [Start:Stop:Step]	
+		DataFrameObj[Start:Stop:Step] [ ["ColName1","ColName2",....,"ColName-n"] ]
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+		How To access the Data from DataFrame Object by using------> loc[]
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+loc[]------------- > It works with Row Indices and Col Names Only
+									But Not with Col Indices
+		------->Start Row Index : Stop RowIndex---->(Both of them Inclusive)
+**************************
+Syntaxes
+-----------------------------
+					DataFrameObj.loc[row Index]
+					DataFrameObj.loc[[row Index1,rowindex2,....row index-n]]
+					DataFrameObj.loc[row index,["colname"]]
+					DataFrameObj.loc[row index,["colname1","colname2",........] ]
+					DataFrameobj.loc[start:stop:step]
+					DataFrameobj.loc[start:stop:step] [["colname1","colname2",........] ]
+					DataFrameobj.loc[start:stop:step,["colname1","colname2",........] ]
+					DataFrameobj.loc[start:stop:step, "colname1":"colname-n"]]
+					DataFrameobj.loc[start:stop:step, "colname1":"colname-n":step]]
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+		How To access the Data from DataFrame Object by using-------> iloc[]
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+iloc[]------------- > It works with Row Indices and Col Indices Only
+									But Not with Col Names
+		------->Start Row Index : Stop RowIndex---->(Start Row Included, Stop RowIndex Excluded)
+
+					DataFrameObj.iloc[row Index]
+					DataFrameObj.iloc[[row Index1,rowindex2,....row index-n]]
+					DataFrameObj.iloc[row index,[ColIndex]]
+					DataFrameObj.iloc[row index,["ColIndex1","ColIndex2",........] ]
+					DataFrameobj.iloc[start:stop:step]
+					DataFrameobj.iloc[start:stop:step] [["ColIndex1","ColIndex2",........] ]
+					DataFrameobj.iloc[start:stop:step,["ColIndex1","ColIndex2",........] ]
+					DataFrameobj.iloc[start:stop:step, "ColIndex1":"ColIndex-n"]]
+					DataFrameobj.iloc[start:stop:step, "ColIndex1":"ColIndex-n":step]]
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+				Adding the New Column(s) to the DataFrame				
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Syntax:    DataFrameObj["NewColname"]=Default Value
+Syntax:    DataFrameObj["NewColname"]=Expression
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+				Data Filtering from DataFrame by using Conditions
+							OR
+				Querying the Data from DataFrame by using Conditions
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Syntax1:  DataFrameObj.loc[Simple Test Cond]
+Syntax2:  DataFrameObj.loc[Compund Test Cond]
+Syntax3:  DataFrameObj.loc[Simple Test Cond, ["Colname1","colname2"......] ]
+Syntax4: DataFrameObj.loc[Compund Test Cond, ["Colname1","colname2"......] ]]
+Syntax5: DataFrameObj[ DataFrameObj[SingleTest Cond] ] ["ColName1"]
+Syntax6: DataFrameObj[ DataFrameObj[SingleTest Cond] ] [["ColName1","ColName-2"...]]
+Syntax7: DataFrameObj[ DataFrameObj[Compound Test Cond] ] ["ColName1"]
+Syntax8: DataFrameObj[ DataFrameObj[Compund Test Cond] ] [["ColName1","ColName-2"...]]
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+				Conditional Updations in DataFrame
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Syntax1:  DataFrameObj.loc[Simple Test Cond,[ColName]]=Expression
+Syntax2:  DataFrameObj.loc[Compund Test Cond,[ColName]]=Expression
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+			Knowing about Duplicates in DataFrames
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Syntax:   DataframeObj.duplicated()	----gives Boolean Array	
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+	Removing the Duplicate Values from DataFrame Object
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Syntax:	DataFrameObj.drop_duplicates()		
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+		Adding the Row / Record to the DataFrame Object
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Syntax:	DataFrameObj.loc[len(DataFrame]+1]=[Val1,Val2,........Val-n]
+
+Examples:  df.loc[len(df)+1]=[125,"Mehraj",55,90,95,92,89,78]
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+		Adding the Row / Record to the DataFrame Object
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Syntax:	DataFrameObj.loc[len(DataFrame]+1]=[Val1,Val2,........Val-n]
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+			Sorting the Data of DataFrame Object
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Syntax:	DataFrameObj.sort_values([ColName])
+Syntax:	DataFrameObj.sort_values([ColName],ascending=False)
+Syntax:	DataFrameObj.sort_values([ColName],ascending=True)
+Syntax:	DataFrameObj.sort_values([ColName],inplace=True)
+Syntax:	DataFrameObj.sort_values([ColName],ascending=True,inplace=True)
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+			Removing the Column Name(s) from DataFrame
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+						BASED COLUMN NAME
+Syntax-1:   DataFrameObj.drop(columns="colname")
+Syntax-2:   DataFrameObj.drop(columns=[ColName1,ColName2,....])
+Syntax-3:  DataFrameObj.drop(columns="colname",inplace=True)
+Syntax-4:   DataFrameObj.drop(columns=[ColName1,ColName2,....],inplace=True)
+		******************************************************************************************
+						BASED COLUMN NUMBER
+Syntax-5:  DataFrameobj.drop(columns=DataFrameobj.columns[ColNumber])
+Syntax-6:  DataFrameobj.drop(columns=DataFrameobj.columns[[ColNumber1,ColNumber2,.......]])
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+			Removing the Row(s) from DataFrame Object
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Syntax-1:   DataFrameObj.drop(labels=index value , axis=0)	
+Syntax-2:   DataFrameObj.drop(labels=[index value1,Index Value2......] , axis=0)	
+Syntax-3:   DataFrameObj.drop(labels=index value , axis=0,inplace=True)	
+Syntax-4:   DataFrameObj.drop(labels=[index value1,Index Value2......] , axis=0,inplace=True)	
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+			Export the DataFrame data to CSV File
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Syntax:     DataFrame.to_csv("ABS PATH")
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+					Working with Missing Values
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+=>Missing Values in numpy are  numpy.nan OR numpy NaN OR None
+=>Missing Values in Pandas are  pandas.NA
+=>To Find Missing Values----------1. DataFrameobj.isna()
+	(Entire DataFrameObject)	2. DataFrameobj.isnull()
+							
+
+=>To Find Missing Values----------1. DataFrameobj[ColumnName].isna()
+(For DataFrameObject Column)	2. DataFrameobj[ColumnName].isnull()
+							
+
+=>To Find Missing Values----------1. DataFrameobj.loc[Row Index].isna()
+(For DataFrameObject Row)		2. DataFrameobj.loc[Row Index].isnull()
+							
+
+=>To Find Non-Missing Values----------1. DataFrameobj.notna()
+	(Entire DataFrameObject)		2. DataFrameobjnotnull()
+
+=>To Find Non-Missing Values----------1. DataFrameobj[ColumnName].notna()
+(For DataFrameObject Column)		2. DataFrameobj[ColumnName].notnull()
+								
+
+=>To Find Non-Missing Values----------1. DataFrameobj.loc[Row Index].notna()
+(For DataFrameObject Row)			2. DataFrameobj.loc[Row Index].notnull()
+							
+
+=>Replacing the Missing Values-------1.  DataFrameobj.fillna(value want fill)
+	in entire DataFrameObject		2. DataFrameobj.replace(to_replace=np.nan/pd.NA/None, value want fill )
+
+=>Replacing the Missing Values(with Single Column)
+              1. DataFrame['ColName']=DataFrame['ColName'].fillna(fill value)
+	    2. DataFrame['ColName']=DataFrame['ColName'].replace(to_replace=np.nan, value=fill value)
+=>Replacing the Missing Values(with multiple Columns)
+	1. DataFrame[['ColName1','ColName2'...]]=DataFrame[['ColName1','ColName2'...]].fillna(fillvalue)
+	2. DataFrame[['ColName1','ColName2'...]]=DataFrame[['ColName1','ColName2'...]].replace(to_replace=np.nan/pd.NA/None, value want fill )
+
+=>Replacing the Missing Values(with Single Row)
+              1. DataFrame.loc[Row Index]=DataFrame.loc[Row Index].fillna(fill value)
+	      2. DataFrame.iloc[Row Index]=DataFrame.iloc[Row Index].fillna(fill value)
+	    3. DataFrame.loc[Row Index]=DataFrame.loc[Row Index].replace(to_replace=np.nan, value=fill value)
+	    4. DataFrame.iloc[Row Index]=DataFrame.iloc[Row Index].replace(to_replace=np.nan, value=fill value)
+
+=>Replacing the Missing Values(with multiple Rows)
+ 1. DataFrame.loc[Row Index1,Row Index2....]=DataFrame.loc[Row Index1,Row Index2..].fillna(fill value)
+2. DataFrame.iloc[Row Index1,Row Index2....]=DataFrame.iloc[Row Index1,Row Index2..].fillna(fill value)
+ 3. DataFrame.loc[Row Index1,Row Index2....]=DataFrame.loc[Row Index1,Row Index2..].replace(to_replace=np.nan,value=fill value)
+ 3. DataFrame.iloc[Row Index1,Row Index2....]=DataFrame.iloc[Row Index1,Row Index2..].replace(to_replace=np.nan,value=fill value)
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+					Dropping  the Missing Values
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+=>To drop the missing Values, we use   dropna(axis,how,inplace)
+			Here axis values are  0(Rows--default) and 1(columns)
+			here 'how' values are 'any'(default) and 'all'
+		=>‘any’ : If any NA values are present, drop that row or column.
+		=> ‘all’ : If all values are NA, drop that row or column.
+
+			1)	DataFrameObj.dropna(axis,how,inplace) 
+			2)	DataFrameObj.dropna(axis)
+			3)	DataFrameObj.dropna(how)
+			4)	DataFrameObj.dropna()
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+			Iterating the DataFrame Object Data
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+1. Iterating the DataFrame Object Data by using Row Indices
+				for rec in df.iterrows():
+				    print("Row Index:{}".format(rec[0]))
+				    print("\tRecord Values:{}".format(rec[1].values))    
+						OR
+				for (rind,rvals) in df.iterrows():
+				    print("Row Index:{}".format(rind))
+				    print("\tRecord Values:{}".format(rvals.values))    
+						OR
+				for i in range(df.shape[0]):
+					    print("Row Index Value=",i)
+					    print("\tRow Values=",df.iloc[i].values)
+						OR
+				for i in range(df.shape[0]):
+					    print("Row Index Value=",i)
+					    print("\tRow Values=",df.loc[i].values)
+							
+2. Iterating the DataFrame Object Data by using Row Names	
+			for (rowname,rowvals) in df.iterrows():
+			    print("Row Index Name:",rowname)
+			    print("\tRow Values:{}".format(rowvals.values))
+
+3.Iterating the DataFrame Object Data by using  Col Names
+			for colname in df.columns:
+			    print("Column Name:{}".format(colname))
+			    print("\tColumn Values:{}".format(df[colname].values))
+			
+
+4. Iterating the DataFrame Object Data by using Column  Indices
+			for colindex in range(df.shape[1]):
+			    print("Column Index:{}".format(colindex))
+			    print("\tColumn Data={}".format(df.iloc[:,colindex].values))
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+				Merging of Data Frames into Single DataFrame
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+Syntax:   DataFrameobj.concat(DataFrameObj1	,DataFrameObj2,....DataFrameObj-n,axis=0) # Here axis=0 Row
+Syntax:   DataFrameobj.concat(DataFrameObj1	,DataFrameObj2,....DataFrameObj-n,axis=1) # Here axis=1 Columns
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
